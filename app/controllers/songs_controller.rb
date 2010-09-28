@@ -1,7 +1,11 @@
 class SongsController < ApplicationController
 
-  before_filter :authenticate_admin!, :except => :index
+  before_filter :authenticate_admin!, :except => [:public, :show]
 
+  def public
+    index
+  end
+  
   # GET /songs
   # GET /songs.xml
   def index

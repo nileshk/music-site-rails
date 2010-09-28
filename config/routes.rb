@@ -2,7 +2,7 @@ MusicSite::Application.routes.draw do
   devise_for :admins
 
   resources :songs
-  root :to => "songs#index"
+  root :to => "songs#public"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
