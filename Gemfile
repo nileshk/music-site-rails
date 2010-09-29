@@ -11,6 +11,7 @@ gem 'pg'
 gem 'devise'
 gem 'warden'
 gem 'bcrypt-ruby'
+gem 'paperclip'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -2,5 +2,20 @@
 
 <%= render 'form' %>
 
+<% form_for @song, :as => :song, :url => song_path(@song), :html => { :method => :put, :multipart => true } do |f| %>
+  <%= f.label :position %><br/>
+  <%= f.text_field :position %><br/>
+  <%= f.label :title %><br/>
+  <%= f.text_field :title %><br/>
+  <%= f.label :description %><br/>
+  <%= f.text_field :description %><br/>
+  <%= f.label :mp3 %><br/>
+  <%= f.file_field :mp3 %><br/>
+  <%= f.label :ogg %><br/>
+  <%= f.file_field :ogg %><br/>
+  <br/>
+  <%= f.submit %><br/>
+<% end %>
+
 <%= link_to 'Show', @song %> |
 <%= link_to 'Back', songs_path %>
