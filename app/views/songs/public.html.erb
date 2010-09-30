@@ -6,16 +6,15 @@
     <meta name="author" content="Nilesh Kapadia" />
 
     <link rel="icon" type="image/png" href="/img/favicon32.png" />
-    
+
     <link href="/jplayer/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/jplayer/jquery.jplayer.min.js">
-    </script>
-
-    <script type="text/javascript" src="/jplayer/demos.common.js"></script>
-
-    <script type="text/javascript" src="/visuals.js"></script>
+    <%= javascript_include_tag "application",
+        "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
+        "/jplayer/jquery.jplayer.min.js",
+        "/jplayer/demos.common.js",
+        "/visuals.js"
+     %>
 
     <script type="text/javascript">
       <!-- Google Analytics -->
