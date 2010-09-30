@@ -2,7 +2,7 @@
 
 <%= render 'form' %>
 
-<% form_for @song, :as => :song, :url => song_path(@song), :html => { :method => :put, :multipart => true } do |f| %>
+<%= form_for @song, :as => :song, :url => song_path(@song), :html => { :method => :put, :multipart => true } do |f| %>
   <%= f.label :position %><br/>
   <%= f.text_field :position %><br/>
   <%= f.label :title %><br/>

@@ -3,13 +3,17 @@ class SongsController < ApplicationController
   before_filter :authenticate_admin!, :except => [:public, :show]
 
   def public
-    index
+    @songs = Song.all(:order => :position)
+
+    respond_to do |format|
+      format.html { render :layout => false }
+    end
   end
   
   # GET /songs
   # GET /songs.xml
   def index
-    @songs = Song.all
+    @songs = Song.all(:order => :position)
 
     respond_to do |format|
       format.html # index.html.erb
