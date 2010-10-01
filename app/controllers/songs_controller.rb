@@ -4,6 +4,7 @@ class SongsController < ApplicationController
 
   def public
     @songs = Song.all(:order => :position)
+    @site_config = SiteConfig
 
     respond_to do |format|
       format.html { render :layout => false }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Nilesh Kapadia's Music</title>
+    <title><%= SiteConfig.sitename %></title>
     <meta name="author" content="Nilesh Kapadia" />
 
     <link rel="icon" type="image/png" href="/img/favicon32.png" />
@@ -19,7 +19,7 @@
     <script type="text/javascript">
       <!-- Google Analytics -->
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-18049880-2']);
+      _gaq.push(['_setAccount', '<%= SiteConfig.google_analytics_account %>']);
       _gaq.push(['_trackPageview']);
 
       (function() {
@@ -151,7 +151,7 @@ $(document).ready(function(){
 
   </head>
   <body>
-	<h1>Nilesh D Kapadia's Music</h1>
+	<h1><%= SiteConfig.sitename %></h1>
 	  <div id="jquery_jplayer"></div>
 
 	  <div class="jp-playlist-player">
@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 	  </div>
   
-        <h3>&copy; 2010 <a href="/">Nilesh D Kapadia</a></h3>
+        <h3>&copy; 2010 <a href="/"><%= SiteConfig.author %></a></h3>
 
     <canvas id="c" width="400" height="400"></canvas>
   </body>
