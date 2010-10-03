@@ -1,6 +1,7 @@
 .bundle
 db/*.sqlite3
 config/database.yml
+config/initializers/site_config.rb
 log/*.log
 tmp/**/*
 public/system
