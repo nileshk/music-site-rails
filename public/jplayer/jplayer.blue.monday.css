@@ -33,6 +33,7 @@ div.jp-interface {
 	width:418px;
 	height:80px;
 	border:1px solid #009be3;
+	border-bottom:none;
 }
 div.jp-single-player div.jp-interface {
 	border-bottom:none;
@@ -211,7 +212,8 @@ div.jp-playlist-player div.jp-total-time {
 	left:164px;
 }
 div.jp-playlist {
-	width:418px;
+	width:318px;
+    float: left;
 }
 div.jp-playlist ul{
 	list-style-type:none;
@@ -219,8 +221,7 @@ div.jp-playlist ul{
 	padding:0 20px;
 	background-color:#ccc;
 	border:1px solid #009be3;
-	border-top:none;
-	width:378px;
+	width:278px;
 	font-size:.72em;
 }
 div.jp-single-player div.jp-playlist li {
@@ -249,4 +250,50 @@ div.jp-playlist-player div.jp-playlist a:hover {
 }
 div.jp-playlist-player div.jp-playlist a.jplayer_playlist_current {
 	color:#0d88c1;
+}
+
+/* Download links */
+div.jp-downloads {
+    width:150x;
+    float: left;
+}
+div.jp-downloads ul{
+	list-style-type:none;
+	margin:0;
+	padding:0 20px;
+	background-color:#ccc;
+	border:1px solid #009be3;
+	width:130px;
+	font-size:.72em;
+}
+div.jp-single-player div.jp-downloads li {
+	padding:5px 0 5px 20px;
+	font-weight:bold;
+}
+div.jp-playlist-player div.jp-downloads li {
+	padding:5px 0 4px 20px;
+	border-bottom:1px solid #eee;
+}
+div.jp-playlist-player div.jp-downloads li.jplayer_playlist_item_last {
+	padding:5px 0 5px 20px;
+	border-bottom:none;
+}
+div.jp-playlist-player div.jp-downloads li.jplayer_playlist_current {
+	list-style-type:square;
+	list-style-position:inside;
+	padding-left:8px;
+}
+div.jp-playlist-player div.jp-downloads a {
+	color: #666;
+	text-decoration: none;
+}
+div.jp-playlist-player div.jp-downloads a:hover {
+	color:#0d88c1;
+}
+div.jp-playlist-player div.jp-downloads a.jplayer_playlist_current {
+	color:#0d88c1;
+}
+
+div.footer {
+    clear: both;
 }

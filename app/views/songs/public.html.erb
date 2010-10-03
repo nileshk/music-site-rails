@@ -96,13 +96,15 @@ $(document).ready(function(){
 
 	function displayPlayList() {
 		$("#jplayer_playlist ul").empty();
+        $("#jplayer_playlist_downloads ul").empty();
 		for (i=0; i < myPlayList.length; i++) {
 			var listItem = (i == myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
 			listItem += "<a href='#' id='jplayer_playlist_item_"+i+"' tabindex='1'>"+ myPlayList[i].name +"</a>";
-            listItem += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-            listItem += "(<a href='" + myPlayList[i].mp3 + "'>MP3</a>) ";
-            listItem += "(<a href='" + myPlayList[i].ogg + "'>OGG</a>)";
+			var downloadItem = (i == myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
+            downloadItem += "(<a href='" + myPlayList[i].mp3 + "'>MP3</a>) ";
+            downloadItem += "(<a href='" + myPlayList[i].ogg + "'>OGG</a>)";
 			$("#jplayer_playlist ul").append(listItem);
+            $("#jplayer_playlist_downloads ul").append(downloadItem);
 			$("#jplayer_playlist_item_"+i).data( "index", i ).click( function() {
 				var index = $(this).data("index");
 				if (playItem != index) {
@@ -188,11 +190,20 @@ $(document).ready(function(){
 			<li></li>
 		  </ul>
 		</div>
-
+        <div id="jplayer_playlist_downloads" class="jp-downloads">
+          <ul>
+            <li>(MP3) (OGG)</li>
+            <li>(MP3) (OGG)</li>
+            <li>(MP3) (OGG)</li>
+          </ul>
+        </div>
 	  </div>
-  
+      <div class="footer">
+        <br/>
         <h3>&copy; 2010 <a href="/"><%= SiteConfig.author %></a></h3>
-
-    <canvas id="c" width="400" height="400"></canvas>
+      </div>
+      <div class="visualization">
+        <canvas id="c" width="400" height="400"></canvas>
+      </div>
   </body>
 </html>
