@@ -7,7 +7,8 @@
 
     <link rel="icon" type="image/png" href="/img/favicon32.png" />
 
-    <%= stylesheet_link_tag "/jplayer/jplayer.blue.monday.css" %>
+    <%= stylesheet_link_tag "scaffold", "center-layout",
+        "/jplayer/jplayer.blue.monday.css" %>
 
     <%= javascript_include_tag "application",
         "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
@@ -156,7 +157,8 @@ $(document).ready(function(){
 
   </head>
   <body>
-	<h1><%= SiteConfig.sitename %></h1>
+    <div id="content">
+	  <h1><%= SiteConfig.sitename %></h1>
 	  <div id="jquery_jplayer"></div>
 
 	  <div class="jp-playlist-player">
@@ -198,11 +200,12 @@ $(document).ready(function(){
           </ul>
         </div>
 	  </div>
-      <div class="footer">
-        <br/>
-        <h3>&copy; 2010 <a href="/"><%= SiteConfig.author %></a></h3>
+      <div id="footer">
+        &copy; 2010 <a href="/"><%= SiteConfig.author %></a>
       </div>
-      <div class="visualization">
+    </div>
+    <br/>
+      <div id="visualization">
         <canvas id="c" width="400" height="400"></canvas>
       </div>
   </body>

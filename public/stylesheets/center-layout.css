@@ -1,0 +1,23 @@
+body { background-color: #ccc; color: #333; }
+
+#content {
+    background-color: #fff;
+    padding: 5px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 7px 7px 25px #000;
+    -moz-box-shadow: 7px 7px 25px #000;
+    -webkit-box-shadow: 7px 7px 25px #000;
+    border: 1px solid black;
+    
+}
+
+#visualization { 
+    padding: 7px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+#footer { text-align: right; }
