@@ -137,6 +137,7 @@ $(document).ready(function(){
 	function playListChange( index ) {
 		playListConfig( index );
 		$("#jquery_jplayer").jPlayer("play");
+        resumeAnimation();
 	}
 
 	function playListNext() {
