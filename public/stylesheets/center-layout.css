@@ -20,4 +20,5 @@ body { background-color: #ccc; color: #333; }
     margin-right: auto;    
 }
 
+#header { text-align: center; }
 #footer { text-align: right; }
