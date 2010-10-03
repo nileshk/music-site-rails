@@ -98,7 +98,10 @@ $(document).ready(function(){
 		$("#jplayer_playlist ul").empty();
 		for (i=0; i < myPlayList.length; i++) {
 			var listItem = (i == myPlayList.length-1) ? "<li class='jplayer_playlist_item_last'>" : "<li>";
-			listItem += "<a href='#' id='jplayer_playlist_item_"+i+"' tabindex='1'>"+ myPlayList[i].name +"</a></li>";
+			listItem += "<a href='#' id='jplayer_playlist_item_"+i+"' tabindex='1'>"+ myPlayList[i].name +"</a>";
+            listItem += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            listItem += "(<a href='" + myPlayList[i].mp3 + "'>MP3</a>) ";
+            listItem += "(<a href='" + myPlayList[i].ogg + "'>OGG</a>)";
 			$("#jplayer_playlist ul").append(listItem);
 			$("#jplayer_playlist_item_"+i).data( "index", i ).click( function() {
 				var index = $(this).data("index");
