@@ -18,11 +18,12 @@ To be able to use this the following files need to be configured:
 * Create a `config/initializers/site_config.rb` file by copying
   `config/initializers/site_config.rb.example` and modifying for your
   site
-* Create an admin user (using Devise for auth).  I do this with the
+* Create an admin user (using [Devise][] for auth).  I do this with the
   Rails console as [described here][1].
 * Once running, browse to `/songs`, and add new songs, uploading MP3 and
   OGG versions of your songs.
 
+[devise]: http://github.com/plataformatec/devise
 [1]: http://stackoverflow.com/questions/2708417/creating-an-admin-user-in-devise-on-rails-beta-3/2752839#2752839)
 
 ## TODO ##
@@ -38,4 +39,4 @@ To be able to use this the following files need to be configured:
 
 This is used by:
 
-* [Nilesh D Kapadia's Music](http://nileshk.org) (not yet, to be deployed)
+* [Nilesh D Kapadia's Music](http://nileshk.org)
