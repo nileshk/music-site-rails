@@ -8,12 +8,27 @@ var animation_enabled = false;
 var c_canvas;
 var ctx;
 var display_time_enabled = false;
+var initialized = false;
+var complete_enabling = false;
 
 function initAnimation() {
     c_canvas = document.getElementById("c");
     ctx = c_canvas.getContext("2d");
+    initialized = true;
     //draw();
     //setInterval(draw, INTERVAL);
+}
+
+function enableAnimation() {
+    if (!initialized) {
+        initAnimation();
+    }
+    complete_enabling = true;
+}
+
+function disableAnimation() {
+    complete_enabling = false;
+    clear_canvas();
 }
 
 function pauseAnimation() {
@@ -21,9 +36,15 @@ function pauseAnimation() {
 }
 
 function stopAnimation() {
-    // Eventually this may be different, but for now
-    // does the same thing as pause.
     pauseAnimation();
+    clear_canvas();
+}
+
+function initOrResumeAnimation() {
+    if (!initialized) {
+        initAnimation();
+    }
+    resumeAnimation();
 }
 
 function resumeAnimation() {
@@ -31,7 +52,7 @@ function resumeAnimation() {
 }
 
 function draw(loadPercent, playedPercentRelative, playedPercentAbsolute, playedTime, totalTime) {
-    if (!animation_enabled) {
+    if (!animation_enabled || !complete_enabling) {
         return;
     }
     ctx.save();

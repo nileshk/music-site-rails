@@ -33,6 +33,15 @@
 
 $(document).ready(function(){
 
+    $('#enableVisuals').click(function() {
+        var checkBoxVal = $('#enableVisuals:input').attr('checked');
+        if (checkBoxVal === true) {
+          enableAnimation();
+        } else {
+          disableAnimation();
+        }
+    });
+
 	var playItem = 0;
 
 	var myPlayList = [
@@ -151,7 +160,7 @@ $(document).ready(function(){
 	}
 
     /* Visualizations */
-    initAnimation();
+//    initAnimation();
 });
 
     </script>
@@ -203,14 +212,20 @@ $(document).ready(function(){
           </ul>
         </div>
 	  </div>
+      <div id="visualEnabler">
+        <form action="#">
+          <input type="checkbox" 
+                 id="enableVisuals" name="enableVisuals"/>Visuals
+        </form>
+      </div>
       <div id="footer">
         &copy; 2010 <a href="<%= SiteConfig.author_url %>">
           <%= SiteConfig.author %></a>
       </div>
     </div>
     <br/>
-      <div id="visualization">
-        <canvas id="c" width="400" height="400"></canvas>
-      </div>
+    <div id="visualization">
+      <canvas id="c" width="400" height="400"></canvas>
+    </div>
   </body>
 </html>
