@@ -3,7 +3,8 @@ MusicSite::Application.routes.draw do
 
   resources :songs
   root :to => "songs#public"
-
+  match 'browser_failure' => 'songs#browser_failure'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

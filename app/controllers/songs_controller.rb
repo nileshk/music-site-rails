@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
 
-  before_filter :authenticate_admin!, :except => [:public, :show]
+  before_filter :authenticate_admin!, :except => [:public, :browser_failure, :show]
 
   def public
     @songs = Song.all(:order => :position)
@@ -9,6 +9,10 @@ class SongsController < ApplicationController
     respond_to do |format|
       format.html { render :layout => false }
     end
+  end
+
+  def browser_failure
+    public
   end
   
   # GET /songs
